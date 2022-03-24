@@ -1,5 +1,5 @@
 var SpeechRecognition = window.webkitSpeechRecognition;
-var Content;
+var content;
 var recognition = new SpeechRecognition();
 
 function start()
@@ -9,10 +9,10 @@ function start()
 
 recognition.onresult = function(event){
     console.log(event);
-    var content = event.results[0][0].transcript;
+     content = event.results[0][0].transcript;
    
     console.log(content);
-    if(content == " selfie"){
+    if(content == "selfie"){
      console.log("taking selfie");
     speak();
     }
